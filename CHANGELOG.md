@@ -4,6 +4,11 @@ All notable changes to agent-publish will be documented in this file. Format fol
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-04-27
+
+### Changed
+- **npm package renamed from `agent-publish` to `@p-vbordei/agent-publish`** now that the `p-vbordei` org exists on npm. The binary name (`agent-publish`) is unchanged. Install: `npm i -g @p-vbordei/agent-publish`. The unscoped `agent-publish` is deprecated and points here.
+
 ## [0.1.1] - 2026-04-27
 
 ### Added
