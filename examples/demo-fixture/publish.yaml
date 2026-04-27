@@ -1,0 +1,13 @@
+version: 1
+package:
+  name: agent-id
+  language: typescript-bun
+registries:
+  - kind: npm
+    package: agent-id
+    provenance: true
+    trusted_publisher: true
+  - kind: github-release
+    repo: p-vbordei/agent-id
+    draft: false
+    prerelease: false

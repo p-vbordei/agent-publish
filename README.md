@@ -2,7 +2,7 @@
 
 > One-shot multi-registry release publisher for OSS packages. Single Bun binary. v0.1: npm + GitHub release with OIDC Trusted Publishers + SLSA provenance.
 
-**Status:** v0.0.0 — under construction. See [SCOPE.md](./SCOPE.md), [SPEC.md](./SPEC.md), [docs/superpowers/specs/](./docs/superpowers/specs/).
+**Status:** v0.1.0 — see [CHANGELOG.md](./CHANGELOG.md), [SPEC.md](./SPEC.md), [SCOPE.md](./SCOPE.md).
 
 ## What it does
 
@@ -10,10 +10,22 @@ Reads `publish.yaml` in your repo and publishes the current release to every con
 
 ```bash
 bun install
-$EDITOR publish.yaml         # declare which registries this repo ships to
-git tag v0.2.0 && git push --tags
-agent-publish publish        # → npm publish --provenance + gh release create
-                             # → release-manifest.json on stdout + GH release asset
+bun run examples/demo.ts     # self-contained, no network — prints the JSON manifest
+                             # for the fixture in examples/demo-fixture/
+
+# In your own TS+Bun OSS repo:
+cp publish.yaml.example publish.yaml && $EDITOR publish.yaml
+git tag v0.2.0
+agent-publish manifest                   # preview the manifest (no publish)
+agent-publish publish --dry-run          # full flow, no network writes
+agent-publish publish                    # for real: npm + GH release + manifest
+```
+
+To produce a single binary:
+
+```bash
+bun build --compile --outfile agent-publish src/index.ts
+./agent-publish manifest
 ```
 
 ## Scope by version

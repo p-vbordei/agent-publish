@@ -1,6 +1,6 @@
 {
   "name": "agent-publish",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "One-shot multi-registry release publisher for OSS packages",
   "type": "module",
   "bin": { "agent-publish": "./src/index.ts" },
