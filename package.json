@@ -1,0 +1,23 @@
+{
+  "name": "agent-publish",
+  "version": "0.0.0",
+  "description": "One-shot multi-registry release publisher for OSS packages",
+  "type": "module",
+  "bin": { "agent-publish": "./src/index.ts" },
+  "scripts": {
+    "test": "bun test",
+    "build": "bun build --compile --outfile agent-publish src/index.ts",
+    "lint": "biome check src tests"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@types/js-yaml": "^4.0.9",
+    "bun-types": "latest"
+  },
+  "license": "Apache-2.0",
+  "trustedDependencies": ["@biomejs/biome"]
+}

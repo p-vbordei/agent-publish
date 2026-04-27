@@ -1,0 +1,8 @@
+node_modules/
+agent-publish
+agent-publish.exe
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
