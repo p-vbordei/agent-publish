@@ -1,7 +1,11 @@
 {
   "name": "agent-publish",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One-shot multi-registry release publisher for OSS packages",
+  "author": "Vlad Bordei <bordeivlad@gmail.com>",
+  "homepage": "https://github.com/p-vbordei/agent-publish",
+  "repository": { "type": "git", "url": "git+https://github.com/p-vbordei/agent-publish.git" },
+  "bugs": { "url": "https://github.com/p-vbordei/agent-publish/issues" },
   "type": "module",
   "bin": { "agent-publish": "./src/index.ts" },
   "scripts": {

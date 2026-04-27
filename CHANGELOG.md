@@ -4,6 +4,11 @@ All notable changes to agent-publish will be documented in this file. Format fol
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-27
+
+### Added
+- `author`, `homepage`, `repository`, `bugs` fields in package.json so the npm page links back to the GitHub source and identifies Vlad Bordei <bordeivlad@gmail.com> as author. No code changes.
+
 ## [0.1.0] - 2026-04-27
 
 ### Added
